@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shriya Tyagi — AI Creative Studio</title>
+  <meta name="description" content="An AI Creative Studio exploring the intersection of code, cinema, and imagination. Founded by Shriya Tyagi.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Film Grain Overlay -->
+  <div class="grain"></div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Minimal Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">Luna</div>
+    <div class="nav-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#vision">Vision</a>
+      <a href="#collaborate">Work with us</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SECTION 1: HERO — CINEMATIC MONTAGE -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-montage" id="heroMontage">
+      <!--
+        Drop 5-8 short clips into assets/clips/ as clip-1.mp4, clip-2.mp4, etc.
+        The first clip preloads; the rest are lazy-loaded by script.js.
+        Supported: .mp4, .webm
+      -->
+      <div class="montage-slide active" data-ken="zoom-in">
+        <video muted playsinline preload="auto" data-src="assets/clips/clip-1.mp4"></video>
+      </div>
+      <div class="montage-slide" data-ken="pan-right">
+        <video muted playsinline preload="none" data-src="assets/clips/clip-2.mp4"></video>
+      </div>
+      <div class="montage-slide" data-ken="zoom-out">
+        <video muted playsinline preload="none" data-src="assets/clips/clip-3.mp4"></video>
+      </div>
+      <div class="montage-slide" data-ken="pan-left">
+        <video muted playsinline preload="none" data-src="assets/clips/clip-4.mp4"></video>
+      </div>
+      <div class="montage-slide" data-ken="zoom-in-slow">
+        <video muted playsinline preload="none" data-src="assets/clips/clip-5.mp4"></video>
+      </div>
+      <!-- Dark overlay for text readability -->
+      <div class="montage-overlay"></div>
+
+      <!-- Blur layer (reduces on scroll) -->
+      <div class="montage-blur" id="montageBlur"></div>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+      <div class="hero-eyebrow" data-animate="fade-up">An AI Creative Studio</div>
+      <h1 class="hero-title" data-animate="fade-up" data-delay="200">
+        <span class="hero-line">Bringing imagination</span>
+        <span class="hero-line">to life</span>
+      </h1>
+      <p class="hero-sub" data-animate="fade-up" data-delay="400">
+        Exploring the intersection of code, cinema, and imagination.
+      </p>
+    </div>
+
+    <div class="scroll-indicator" data-animate="fade-up" data-delay="800">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <section class="ap-section ap-statement-section scroll-snap-section">
+    <div class="ap-statement">
+      <h2 class="ap-statement-text">What happens when AI becomes a storyteller?</h2>
+    </div>
+  </section>
+
+  <!-- ─── PINK MIC: Intro (Hero Case Study) ─── -->
+  <section class="ap-section ap-case-hero scroll-snap-section" id="portfolio">
+    <div class="ap-case-inner">
+      <span class="s4-badge" data-animate="fade-up">a Viral instagram channel</span>
+      <h2 class="ap-case-title" data-animate="fade-up" data-delay="100">The Pink Mic</h2>
+      <p class="ap-case-sub" data-animate="fade-up" data-delay="200">An AI street interview channel on Instagram, <a href="https://instagram.com/the_pink_mic">@the_pink_mic ↗</a></p>
+      <div class="ap-data-boxes" data-animate="fade-up" data-delay="300">
+        <div class="ap-data-box">
+          <span class="ap-data-num">0 → 10K</span>
+          <span class="ap-data-label">followers</span>
+        </div>
+        <div class="ap-data-box">
+          <span class="ap-data-num">10</span>
+          <span class="ap-data-label">days</span>
+        </div>
+        <div class="ap-data-box">
+          <span class="ap-data-num">41M+</span>
+          <span class="ap-data-label">views</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PINK MIC: Viral Proof (single section) ─── -->
+  <section class="vp-section scroll-snap-section">
+    <div class="vp-inner">
+
+      <!-- Hero video -->
+      <div class="vp-hero" data-animate="fade-up" data-delay="200">
+        <video class="ap-video" muted loop playsinline preload="metadata" src="assets/clips/clip-5.mp4"></video>
+        <div class="vp-overlay">
+          <div class="vp-metric">
+            <span class="vp-num">24M</span>
+            <span class="vp-met-label">views</span>
+          </div>
+          <div class="vp-metric">
+            <span class="vp-num">1.2M</span>
+            <span class="vp-met-label">shares</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting videos -->
+      <div class="vp-support" data-animate="fade-up" data-delay="300">
+        <div class="vp-card">
+          <video class="ap-video" muted loop playsinline preload="metadata" src="assets/clips/clip-3.mp4"></video>
+          <div class="vp-overlay">
+            <div class="vp-metric">
+              <span class="vp-num">8M</span>
+              <span class="vp-met-label">views</span>
+            </div>
+            <div class="vp-metric">
+              <span class="vp-num">620K</span>
+              <span class="vp-met-label">shares</span>
+            </div>
+          </div>
+        </div>
+        <div class="vp-card">
+          <video class="ap-video" muted loop playsinline preload="metadata" src="assets/clips/clip-4.mp4"></video>
+          <div class="vp-overlay">
+            <div class="vp-metric">
+              <span class="vp-num">9M</span>
+              <span class="vp-met-label">views</span>
+            </div>
+            <div class="vp-metric">
+              <span class="vp-num">480K</span>
+              <span class="vp-met-label">shares</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-section ap-statement-section scroll-snap-section">
+    <div class="ap-statement">
+      <h2 class="ap-statement-text" data-animate="fade-up" data-delay="100">A new way to feel human emotions</h2>
+    </div>
+  </section>
+
+  <!-- ─── REDDIT STORIES: Apple-style ─── -->
+  <section class="ap-section ap-split-section scroll-snap-section">
+    <div class="ap-split ap-split-reverse">
+      <div class="ap-phone" data-animate="fade-up">
+        <div class="ap-phone-frame">
+          <video class="ap-video" muted loop playsinline preload="metadata" src="assets/clips/clip-2.mp4"></video>
+        </div>
+      </div>
+      <div class="ap-stats" data-animate="fade-up" data-delay="150">
+        <h3 class="ap-vid-title ap-vid-title-lg">Reddit Stories — Visualized</h3>
+        <p class="ap-vid-desc"><strong>Turning internet stories into short cinematic narratives with AI.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-section ap-statement-section scroll-snap-section">
+    <div class="ap-statement">
+      <!-- <h2 class="ap-statement-text" data-animate="fade-up" data-delay="100">If AI can visualize stories…</h2> -->
+      <h2 class="ap-statement-text" data-animate="fade-up" data-delay="100">Bend the rules of cinema</h2>
+    </div>
+  </section>
+
+  <!-- ─── SCREEN 06: FILMS REIMAGINED ─── -->
+  <section class="fs-screen fs-screen-video scroll-snap-section">
+    <div class="fs-video-bg">
+      <video muted loop playsinline preload="metadata" src="assets/clips/clip-1.mp4"></video>
+      <div class="fs-video-overlay"></div>
+    </div>
+    <div class="fs-content fs-content-bottom">
+      <div class="fs-video-info" data-animate="fade-up">
+        <h3 class="fs-video-title fs-video-title-lg">Films Reimagined</h3>
+        <p class="fs-video-sub">What if iconic movies ended differently? Same characters, completely new stories.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SECTION 4: TRANSITION + WEAVE VISION        -->
+  <!-- ════════════════════════════════════════════ -->
+
+  <!-- ─── 4A: Narrative Transition ─── -->
+  <section class="s4-transition">
+    <div class="s4-transition-inner">
+      <span class="s4-quote-mark">“</span>
+      <h2 class="s4-heading" data-animate="fade-up">The next generation of films won’t <span class="s4-accent">begin on a set</span>. They’ll begin with a <span class="s4-accent">prompt</span>.</h2>
+      <span class="s4-weave-sig">— Shriya, founder</span>
+    </div>
+  </section>
+
+  <!-- ─── 4B: Weave — Vision ─── -->
+  <section class="s4-weave" id="vision">
+    <div class="s4-weave-glow"></div>
+
+    <div class="s4-weave-header">
+      <span class="s4-badge" data-animate="fade-up">The Next Chapter</span>
+      <h2 class="s4-weave-title" data-animate="fade-up" data-delay="100">Weave</h2>
+      <p class="s4-weave-sub" data-animate="fade-up" data-delay="200">
+        Prompt → Film platform
+      </p>
+    </div>
+
+    <div class="s4-weave-content">
+    </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ -->
+  <!-- SECTION 5: WORK WITH US -->
+  <!-- ════════════════════════════════════════════ -->
+  <section class="collaborate" id="collaborate">
+    <div class="collaborate-inner">
+      <h2 class="collab-title" data-animate="fade-up">Work with us</h2>
+      <p class="collab-text" data-animate="fade-up" data-delay="100">
+        Looking for AI visuals, animated films, or creative campaigns? Let’s talk.
+      </p>
+      <div class="collab-links" data-animate="fade-up" data-delay="200">
+        <a href="mailto:0xshriyatyagi@gmail.com" class="collab-link">
+          <span class="collab-link-label">Email</span>
+          <span class="collab-link-value">0xshriyatyagi@gmail.com</span>
+        </a>
+        <a href="https://instagram.com/shriyatyagi" target="_blank" rel="noopener" class="collab-link">
+          <span class="collab-link-label">Instagram</span>
+          <span class="collab-link-value">@shriyatyagi</span>
+        </a>
+        <a href="https://x.com/0xshriya" target="_blank" rel="noopener" class="collab-link">
+          <span class="collab-link-label">X / Twitter</span>
+          <span class="collab-link-value">@0xshriya</span>
+        </a>
+        <a href="https://linkedin.com/in/shriya-tyagi" target="_blank" rel="noopener" class="collab-link">
+          <span class="collab-link-label">LinkedIn</span>
+          <span class="collab-link-value">Shriya Tyagi</span>
+        </a>
+      </div>
+    </div>
+    <footer class="footer" data-animate="fade-up" data-delay="300">
+      <span>© 2026 Shriya Tyagi — Luna</span>
+    </footer>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

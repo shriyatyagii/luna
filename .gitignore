@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Environment
+.env
+*.log
+
+# Dependencies
+node_modules/
+
+# Large media — host via CDN or Git LFS
+assets/clips/*.mp4
