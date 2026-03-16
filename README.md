@@ -1,6 +1,6 @@
 # Luna — AI Creative Studio
 
-A cinematic portfolio site for [Shriya Tyagi](https://github.com/shriyatyagii), exploring the intersection of code, cinema, and imagination.
+An AI creative studio exploring the intersection of code, cinema, and imagination.
 
 ## Setup
 
