@@ -5,8 +5,7 @@ An AI creative studio exploring the intersection of code, cinema, and imaginatio
 ## Setup
 
 1. Clone the repo
-2. Add video clips to `assets/clips/` (clip-1.mp4 through clip-5.mp4)
-3. Serve locally:
+2. Serve locally:
    ```bash
    python3 -m http.server 8000
    ```
@@ -19,11 +18,9 @@ An AI creative studio exploring the intersection of code, cinema, and imaginatio
 ├── style.css        # Styles
 ├── script.js        # Interactions & montage logic
 └── assets/
-    └── clips/       # Video clips (not tracked in git)
+    └── clips/       # Montage video clips
 ```
 
-## Notes
+## Deployment
 
-Video clips are excluded from git due to file size. If you're collaborating, either:
-- Share clips separately and place them in `assets/clips/`
-- Set up [Git LFS](https://git-lfs.github.com/) to track `*.mp4` files
+Hosted on [Vercel](https://vercel.com) via GitHub. Pushes to `main` trigger automatic deploys.

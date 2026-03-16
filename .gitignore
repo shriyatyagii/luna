@@ -13,5 +13,5 @@ Thumbs.db
 # Dependencies
 node_modules/
 
-# Large media — host via CDN or Git LFS
-assets/clips/*.mp4
+# Large media (uncomment to exclude videos from git)
+# assets/clips/*.mp4
