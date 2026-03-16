@@ -13,5 +13,5 @@ Thumbs.db
 # Dependencies
 node_modules/
 
-# Large media (uncomment to exclude videos from git)
-# assets/clips/*.mp4
+# Original uncompressed videos (keep as local backup)
+assets/clips/originals/

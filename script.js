@@ -10,7 +10,7 @@
      ═══════════════════════════════════════════ */
   const CLIP_DURATION = 2000;       // ms each clip stays visible
   const CROSSFADE_MS  = 600;        // matches CSS transition duration
-  const PRELOAD_AHEAD = 5;          // preload all clips eagerly
+  const PRELOAD_AHEAD = 1;          // preload only next clip to reduce bandwidth
 
   /* ═══════════════════════════════════════════
      LOADING
@@ -20,13 +20,34 @@
     document.body.classList.remove('loading');
     initScrollAnimations();
     initMontage();
+    initLazyVideos();
 
-    // Ensure all videos have playsinline for iOS
     document.querySelectorAll('video').forEach((v) => {
       v.setAttribute('playsinline', '');
       v.setAttribute('webkit-playsinline', '');
     });
   });
+
+  /* ═══════════════════════════════════════════
+     LAZY-LOAD SECTION VIDEOS
+     ═══════════════════════════════════════════ */
+  function initLazyVideos() {
+    const lazyVideos = document.querySelectorAll('video[data-src]:not(.montage-slide video)');
+    if (!lazyVideos.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const video = entry.target;
+        if (video.src) return;
+        video.src = video.dataset.src;
+        video.load();
+        observer.unobserve(video);
+      });
+    }, { rootMargin: '200px' });
+
+    lazyVideos.forEach((v) => observer.observe(v));
+  }
 
   /* ═══════════════════════════════════════════
      CURSOR GLOW (desktop only)
@@ -133,8 +154,9 @@
       current = next;
     }
 
-    // Load all clips immediately
-    slides.forEach((_, i) => loadSlide(i));
+    // Load first clip + next one only; rest load on-demand via advance()
+    loadSlide(0);
+    loadSlide(1);
 
     const firstVideo = slides[0].querySelector('video');
     if (firstVideo) {
